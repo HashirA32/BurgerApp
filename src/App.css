@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+.myNavStyle {
+  font-size: 1.1rem;
+  background-color: #99582A;
+  padding-top: 1.4rem;
+  padding-bottom: 0.3rem;
+  color: white;
+  position: fixed;
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Login {
+ 
+  color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90dvh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.priceBoard {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
+  background-color:#b48031;
+  font-size: 1.1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.Ingridiants {
+  display: flex;
+  align-items: center;
+  justify-content:stretch;
+  gap: 1rem;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.price {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  background-color: rgba(240, 248, 255, 0.281);
+
+}
+
+.signup {
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 0px;
+  background-color: rgb(216, 209, 200);
+  margin-bottom: 2rem;
+  box-shadow: 02px 03px 2px rgb(19, 19, 19);
+
+}
+
+.burgerInside{
+  display: flex;
+  flex-direction: column;
 }
