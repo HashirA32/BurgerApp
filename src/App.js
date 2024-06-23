@@ -1,19 +1,23 @@
-import './App.css';
-
-import Navbar from './comps/Navbar';
-import Content from './comps/Content';
+import React from 'react'
 
 
-// import Footer from './comps/Footer'
-function App() {
+export default function LogInPage() {
   return (
-   <>
-   <Navbar/>
-   <Content/>
-   {/* <Footer/> */}
-
-   </>
-  );
+    <>
+      <div className="LoginCSS Container">       
+        <form>
+          <div className="mb-3 ">
+            <input type="email" className="form-control" placeholder='Email address' id="exampleInputEmail1" aria-describedby="emailHelp"/>
+          </div>
+          <div className="mb-3">
+            
+            <input type="password" className="form-control" placeholder='Password' id="exampleInputPassword1"/>
+          </div>
+          <div className='Log-Submit'>
+           <p>SUBMIT</p>
+          </div>
+        </form>
+      </div>
+    </>
+  )
 }
-
-export default App;
