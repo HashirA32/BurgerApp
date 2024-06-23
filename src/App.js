@@ -1,23 +1,31 @@
-import React from 'react'
+import './App.css';
+import Navbar from './comps/Navbar';
+import Gap from './comps/gap';
 
+import React, {Suspense,lazy} from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+const Content = lazy(()=>import('./comps/Content'));
+const LogInPage = lazy(()=>import('./comps/LogInPage'));
 
-export default function LogInPage() {
+function App() {
   return (
     <>
-      <div className="LoginCSS Container">       
-        <form>
-          <div className="mb-3 ">
-            <input type="email" className="form-control" placeholder='Email address' id="exampleInputEmail1" aria-describedby="emailHelp"/>
-          </div>
-          <div className="mb-3">
-            
-            <input type="password" className="form-control" placeholder='Password' id="exampleInputPassword1"/>
-          </div>
-          <div className='Log-Submit'>
-           <p>SUBMIT</p>
-          </div>
-        </form>
-      </div>
+      <Router>
+        <Navbar />
+        <Gap/>
+        <Suspense fallback = {<div>Loading data...</div>}>
+          <Routes>
+            <Route path="/" element={<Content />} />
+            <Route path="/LogInPage" element={<LogInPage />} />
+          </Routes>
+        </Suspense>
+      </Router>
     </>
-  )
+  );
 }
+
+export default App;
