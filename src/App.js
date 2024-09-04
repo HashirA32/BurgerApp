@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './comps/Navbar';
-
+import Gap from './comps/Gap';
 
 import React, {Suspense,lazy} from "react";
 import {
